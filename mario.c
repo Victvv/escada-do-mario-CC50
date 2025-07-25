@@ -1,5 +1,5 @@
     #include <stdio.h>
-        
+
     int main(void)
     {
         int alt;
@@ -7,21 +7,18 @@
         int hash;
         printf("Enter Number:");
         scanf("%d", &alt);
-        while (alt > 8 || alt < 1)
+        if(alt>8||alt<=0)
         {
-            // You can add code here to prompt again or handle invalid input
-            printf("Please enter a number between 1 and 8:\n");
-            scanf("%d", &alt);
+           printf("Enter Number:");
         }
-        for (cont=0; cont<=alt; cont++)
+        for (cont=1; cont<=alt; cont++)
         {
-           printf(" "); 
-              for (hash=0; hash<alt-cont; hash++)
-              {
-                printf("#");
-              }
+            printf(" ");
+            for(hash=1; hash<=cont; hash++)
+            { 
+                printf("#"); 
+            }
+            printf("\n");
         }
-             printf("\n");
-             
-        return 0;
+            return 0;  
     }
